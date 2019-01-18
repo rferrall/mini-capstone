@@ -27,4 +27,15 @@ def el_salvador_method
   @el_salvador = Product.find_by(id: 4)
   render 'el_salvador.json.jbuilder'
 end
+
+def one_product
+  product_id = params[:id]
+  @product = Product.find_by(id: product_id)
+  render 'first_product.json.jbuilder'
+end
+
+def first_product_method
+  @product = Product.first_product
+  render 'first_product.json.jbuilder'
+end
 end

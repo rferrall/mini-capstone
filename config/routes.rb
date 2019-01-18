@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get "/guatemala_url" => "products#guatemala_method"
 
   get "/el_salvador_url" => "products#el_salvador_method"
+
+  get "/one_product" => "products#one_product"
+
+  get "/one_product/:id" => "products#one_product"
  end
 
 
