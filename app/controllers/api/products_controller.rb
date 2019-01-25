@@ -35,9 +35,9 @@ class Api::ProductsController < ApplicationController
     @product = Product.new(
     name: params["name"],
     price: params["price"],
-    description: params["description"],
-    image_url: params["image_url"]
-    )
+    description: params["description"])
+    # image_url: params["image_url"]
+    # )
    if @product.save
     render 'show.json.jbuilder'
     else 
@@ -50,7 +50,7 @@ class Api::ProductsController < ApplicationController
 
     @product.name = params["name"] || @product.name
     @product.price = params["price"] || @product.price
-    @product.image_url = params["image_url"] || @product.image_url
+    # @product.image_url = params["image_url"] || @product.image_url
     @product.description = params["description"] || @product.description
 
     if @product.save
@@ -68,39 +68,7 @@ class Api::ProductsController < ApplicationController
   
   end
 
-#   def kenya_aa_method
-#     @kenya_aa = Product.find_by(id: 1)
-#     render 'kenya_aa_.json.jbuilder'
-  
-#   end
 
-#   def costa_rica_tarrazu_method
-#     @costa_rica_tarrazu = Product.find_by(id: 2)
-#     render 'costa_rica_tarrazu.json.jbuilder'
-#   end
-
-
-# def guatemala_method
-#   @guatemala = Product.find_by(id: 3)
-#   render 'guatemala.json.jbuilder'
-# end
-
-
-# def el_salvador_method
-#   @el_salvador = Product.find_by(id: 4)
-#   render 'el_salvador.json.jbuilder'
-# end
-
-# def one_product
-#   product_id = params[:id]
-#   @product = Product.find_by(id: product_id)
-#   render 'first_product.json.jbuilder'
-# end
-
-# def first_product_method
-#   @product = Product.first_product
-#   render 'first_product.json.jbuilder'
-# end
 
   
 end
