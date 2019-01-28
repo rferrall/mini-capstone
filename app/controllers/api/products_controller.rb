@@ -12,6 +12,7 @@ class Api::ProductsController < ApplicationController
     if discount
       @products = Product.where("price < ?", 20)
     end
+    
     sort_term = params[:sort]
     sort_order = params[:sort_order]
     if sort_term == "price"
@@ -35,9 +36,9 @@ class Api::ProductsController < ApplicationController
     @product = Product.new(
     name: params["name"],
     price: params["price"],
-    description: params["description"])
-    # image_url: params["image_url"]
-    # )
+    description: params["description"]
+    
+    )
    if @product.save
     render 'show.json.jbuilder'
     else 
@@ -50,7 +51,7 @@ class Api::ProductsController < ApplicationController
 
     @product.name = params["name"] || @product.name
     @product.price = params["price"] || @product.price
-    # @product.image_url = params["image_url"] || @product.image_url
+    
     @product.description = params["description"] || @product.description
 
     if @product.save
