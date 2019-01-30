@@ -4,6 +4,7 @@ json.id product.id
   json.images product.images
   json.description product.description
   json.supplier_name product.supplier.name
+  json.current_user current_user.name
 
   json.formatted do
 json.discounted product.is_discounted?

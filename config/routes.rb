@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # get "/one_product" => "products#one_product"
 
-  # get "/one_product/:id" => "products#one_product"
+  # get "/one_product/:id" =>  "products#one_product"
   get "/products" =>"products#index"
 
   get "/products/:id" => "products#show"
@@ -23,6 +23,13 @@ Rails.application.routes.draw do
   patch "/products/:id" => "products#update"
 
   delete "/products/:id" => "products#destroy"
+
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
+  get "/orders" => "orders#index"
+  post "/orders" => "orders#create"
+
  end
 
 
