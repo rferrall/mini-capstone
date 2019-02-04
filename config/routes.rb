@@ -2,18 +2,6 @@ Rails.application.routes.draw do
  
  namespace :api do
   
-
-  # get "/kenya_aa_url" => "products#kenya_aa_method"
-
-  # get "/costa_rica_tarrazu_url" => "products#costa_rica_tarrazu_method"
-
-  # get "/guatemala_url" => "products#guatemala_method"
-
-  # get "/el_salvador_url" => "products#el_salvador_method"
-
-  # get "/one_product" => "products#one_product"
-
-  # get "/one_product/:id" =>  "products#one_product"
   get "/products" =>"products#index"
 
   get "/products/:id" => "products#show"
@@ -29,6 +17,12 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/orders" => "orders#index"
   post "/orders" => "orders#create"
+
+  
+  get "/carted_products" => "carted_products#index"
+  post "/carted_products" => "carted_products#create"
+  delete "/carted_products/:id" => "carted_products#destroy"
+
 
  end
 
