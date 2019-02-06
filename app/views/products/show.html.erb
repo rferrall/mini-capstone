@@ -1,0 +1,18 @@
+
+<h2> Name: <%= @product.name %> </h2>
+  <h2> Price: <%= @product.price %></h2>
+  <h3> Description: <%= @product.description %></h3>
+  <h4> Supplier Name: <%= @product.supplier.name %></h4>
+
+  <!-- <div> trying to get images to load
+    Images:
+      <% @images.each do |image|%>
+      <input type="text" name="image_url" value="<%=image.id%>"><%= image.url %>
+      <% end %>
+    </select>
+  </div> -->
+
+<a href="/products/<%= @product.id%>/edit">Edit</a>
+
+  
+
